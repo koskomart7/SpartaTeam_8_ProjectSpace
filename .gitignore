@@ -335,3 +335,5 @@ FodyWeavers.xsd
 *.msm
 *.msp
 .idea/
+*.vcxproj
+*.vcxproj.filters
