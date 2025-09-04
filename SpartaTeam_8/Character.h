@@ -25,7 +25,7 @@ private:
     int currentHealth;          
     int maxHealth;             
     int attack;                
-    int experience;            
+    int exp;            
     int gold;                  
     std::vector<Item> inventory;
 
@@ -42,14 +42,14 @@ public:
     int getCurrentHealth() const { return currentHealth; }
     int getMaxHealth() const { return maxHealth; }
     int getAttack() const { return attack; }
-    int getExperience() const { return experience; }
+    int getExp() const { return exp; }
     int getGold() const { return gold; }
 
     void displayStatus() const;
     bool isAlive() const { return currentHealth > 0; }
 
-    void gainExperience(int exp);
-    bool canLevelUp() const { return experience >= EXP_FOR_LEVELUP && level < MAX_LEVEL; }
+    void addExp(int amount) { exp += amount; }
+    bool canLevelUp() const { return exp >= EXP_FOR_LEVELUP && level < MAX_LEVEL; }
     void levelUp();
 
     
