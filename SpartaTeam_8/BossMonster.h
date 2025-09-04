@@ -18,9 +18,9 @@ public:
 	}
 	~BossMonster();
 
-	string getName() override;
-	int getHealth() override;
-	int getAttack() override;
+	string getName() override { return name; }
+	int getHealth() override { return health; }
+	int getAttack() override { return attack; }
 	void takeDamage(int playerDamage) override; // 데미지를 받는 함수
 	Item* dropItem() override;
 };
