@@ -29,6 +29,7 @@ void GameManager::battle(Character* player)
 		// battle Logic
 		if(enemy[targetIdx].health <= 0)
 		{
+			//takeDamage(dealt);
 			enemy.erase(targetIdx);
 		}
 

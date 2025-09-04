@@ -7,7 +7,7 @@ class Item;
 
 class Monster
 {
-private:
+protected:
 	string name;
 	int health;
 	int attack;
@@ -25,18 +25,18 @@ public:
 		}
 	}
 
-	string getName() const { return name; }
-	int getHealth() const { return health; }
-	int getAttack() const { return attack; }
+	string getName() const { return this->name; }
+	int getHealth() const { return this->health; }
+	int getAttack() const { return this->attack; }
 	void takeDamage(int damage)
 	{
-		if (health <= damage)
+		if (this->health <= damage)
 		{
-			health = 0;
+			this->health = 0;
 			cout << "Monster Die" << endl;
 			return;
 		}
-		health -= damage;
+		this->health -= damage;
 	}
 	Item* dropItem();
 };
