@@ -7,12 +7,12 @@ using namespace std;
 
 struct Item
 {
-    std::string name;
+    string name;
     int healthBoost;    
     int attackBoost;    
     int price;          
 
-    Item(const std::string& itemName, int health, int attack, int itemPrice)
+    Item(const string& itemName, int health, int attack, int itemPrice)
         : name(itemName), healthBoost(health), attackBoost(attack), price(itemPrice) {
     }
 };
@@ -27,23 +27,25 @@ private:
     int attack;                
     int exp;            
     int gold;                  
-    std::vector<Item> inventory;
+    vector<Item> inventory;
 
     static const int EXP_FOR_LEVELUP = 100; 
     static const int MAX_LEVEL = 10;        
 
 public:
     
-    Character(const std::string& characterName);
-
+    Character(const string& characterName);
     
-    const std::string& getName() const { return name; }
+    const string& getName() const { return name; }
     int getLevel() const { return level; }
     int getCurrentHealth() const { return currentHealth; }
     int getMaxHealth() const { return maxHealth; }
     int getAttack() const { return attack; }
     int getExp() const { return exp; }
     int getGold() const { return gold; }
+
+
+
 
     void displayStatus() const;
     bool isAlive() const { return currentHealth > 0; }
